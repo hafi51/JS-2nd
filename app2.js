@@ -7,8 +7,14 @@ var password = prompt("Enter Password");
 // }
 
 for(i =0; i<password.length;i++){
-    if(password.charCodeAt(i) != 48 || password.charCodeAt(i) != 49 || password.charCodeAt(i) != 50){
-        alert("Only 0,1,2 allowed")
-        break
+    // if(password.charCodeAt(i) != 48 || password.charCodeAt(i) != 49 || password.charCodeAt(i) != 50){
+    //     alert("Only 0,1,2 allowed")
+    //     break
+    // }
+    for(j=48;j<=57;j++){
+        if(password.charCodeAt(i) != j){
+            alert("only numbers allowed")
+            break
+        }
     }
 }
