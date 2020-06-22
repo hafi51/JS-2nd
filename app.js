@@ -68,3 +68,62 @@ for(i =0 ; i< A.length; i++){
 
 }
 
+                                            //  it works if conditions apllied seperataley
+var password = prompt("Enter Password");
+if(password.length<6){
+    alert("Enter paswword more than 6 characters")
+}else if(password.charCodeAt(0) > 47 && password.charCodeAt(0) < 58){
+    alert("Password must not start with a number")
+}
+
+for(i =1; i<password.length;i++){
+    if((password.charCodeAt(i) < 97 || password.charCodeAt(i) > 122) && password.charCodeAt(i) < 65 || password.charCodeAt(i) > 90 && password.charCodeAt(i) < 48 || password.charCodeAt(i) > 57){
+        alert("Only a-z, A-Z & numbers allowed")
+        break
+    }
+    
+}
+
+var university = "University of Karachi";
+for(i=0;i<university.length;i++){
+    document.write(university.split("")[i] + "<br>")
+}
+
+var str = prompt("Enter Input");
+alert(str.charAt(str.length-1));
+
+
+// 26-30
+var inte = prompt("Enter a positive integer");
+if(inte < 0){
+    alert("Enter only positive integer");
+}
+document.write("Number: " + inte + "<br>");
+document.write("round off value: " + Math.round(inte) + "<br>");
+document.write("floor value: " + Math.floor(inte) + "<br>");
+document.write("ceil value: " + Math.ceil(inte) + "<br>")
+
+var integ = prompt("Enter a negative integer");
+if(integ > 0){
+    alert("Enter only negative integer");
+}
+document.write("Number: " + integ + "<br>");
+document.write("round off value: " + Math.round(integ) + "<br>");
+document.write("floor value: " + Math.floor(integ) + "<br>");
+document.write("ceil value: " + Math.ceil(integ) + "<br>");
+
+var abs = prompt("Enter value");
+document.write("The abosulte value of " + abs + " is " + Math.abs(abs) + "<br>");
+
+document.write("Random dice value: " + Math.floor(Math.random()*6 + 1) + "<br>")
+document.write("Random value from 1 to 100: " + Math.floor(Math.random()*100 + 1) + "<br>")
+
+var inn = parseFloat(prompt("Enter your weight in kilograms"));
+document.write("weight of user is " + inn + " kilograms")
+
+var Num = parseInt(prompt("Enter value b/w 1 to 10"));
+if(Num == Math.round(Math.random()*10 + 1)){
+    alert("Congragulations")
+}else{
+    alert("try again!")
+}
