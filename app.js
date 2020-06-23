@@ -188,3 +188,62 @@ var numOfUnits = parseInt(prompt("Enter number of units"))
 var netAmount = numOfUnits * 16
 document.write("<br> Number of units: " + numOfUnits + "<br> Charges per unit: 16" + " <br> Net Amount Payable (within Due Date): " + netAmount + "<br>Late Payment Surcharge: 350")
 document.write("<br> Gross Amount Payable (after Due Date): " + (netAmount + 350))
+
+// 35-38
+function date(){
+    document.write(Date())
+}
+date()
+
+function userName(firstName, lastName){
+    alert("Hello " + firstName + " " + lastName)
+}
+userName(prompt("Enter your First name"), prompt("Enter your Last name"))
+
+function sum(a, b){
+    return a+b;
+}
+sum(parseInt(prompt("Enter first number")), parseInt(prompt("Enter second number")))
+
+function calc(a, b, o){
+    var result;
+    switch(o){
+        case "+":
+            result = a + b
+            break
+        case "-":
+            result = a - b
+            break
+        case "*":
+            result = a * b
+            break
+        case "/":
+            result = a / b
+            break
+        case "%":
+            result = a % b
+            break
+    }
+    document.write(result)
+    return result;
+}
+calc(parseInt(prompt("Enter first value:")), parseInt(prompt("Enter second value:")), prompt("Enter operator (+, -, *, /, %)"))
+
+function sqr(a){
+    document.write(a*a)
+}
+sqr(parseInt(prompt("Enter number to be squared")))
+
+function fac(a){
+    for(i=a;i>=0;i--){
+        document.write(a * fac(a-1))
+    }
+}
+fac(parseInt(prompt("Enter number to find factorial:")))
+
+function counter(start, end){
+    for(i=start;i<=end;i++){
+        document.write(i+ "<br>")
+    }
+}
+counter(parseInt(prompt("Enter start number")), parseInt(prompt("Enter end number")))
