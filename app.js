@@ -92,6 +92,8 @@ for(i=0;i<university.length;i++){
 var str = prompt("Enter Input");
 alert(str.charAt(str.length-1));
 
+var str = "The quick brown fox jumps over the lazy dog";
+document.write(str.search("the"));
 
 // 26-30
 var inte = prompt("Enter a positive integer");
@@ -127,3 +129,62 @@ if(Num == Math.round(Math.random()*10 + 1)){
 }else{
     alert("try again!")
 }
+
+// 31-34
+document.write(Date() + "<br>");
+
+var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var date = new Date();
+var month = date.getMonth() 
+alert("Current Month: " + monthNames[month])
+
+alert(date.toString().slice(0 ,3))
+
+if(date.getDay() == 0 ||date.getDay() == 6){
+    alert("Its Fun day")
+}
+
+if(date.getDate() <= 15){
+    alert("First fifteen days of the month")
+    }else{
+    alert("Last fifteen days of the month")
+    }
+
+var min = (date.getTime()/1000)/60;
+alert("Elapsed miliseconds since jan 1, 1970: " + date.getTime() + "\n" + "Elapsed minutes since jan 1, 1970: " + min)
+
+if(date.getHours() < 12){
+    alert("It's AM")
+}else{
+    alert("It's PM")
+}
+
+var laterDate = new Date("Sun May 31 2020 15:34:18 GMT+0500 (Pakistan Standard Time)")
+document.write(laterDate)
+
+var ramadan = new Date("Fri Apr 24 2020")
+var ramday = (date.getTime() - ramadan.getTime())/86400000
+alert(Math.floor(ramday) + " days have passed since 1st Ramadan, 2020")
+
+var date2015 = new Date("Thr Jan 01 2015")
+document.write(date2015)
+
+var sec_passed_2015 = (date.getTime() - date2015.getTime())/1000
+alert(Math.floor(sec_passed_2015) + " seconds have passed since Jan 01 2015")
+
+document.write("Current date: Tue Jun 23 2020 16:19:24 GMT+0500 (Pakistan Standard Time)<br>")
+var hourAgo = new Date("Tue Jun 23 2020 15:19:24 GMT+0500 (Pakistan Standard Time")
+document.write("1 hour ago , " + hourAgo + "<br>")
+
+document.write("Current date: Tue Jun 23 2020 16:19:24 GMT+0500 (Pakistan Standard Time)<br>")
+var centAgo = new Date("Tue Jun 23 1920 16:19:24 GMT+0500 (Pakistan Standard Time")
+document.write("100 years back , " + centAgo)
+
+var userAge = parseInt(prompt("Enter your age: "))
+alert("Your birth year is: " + (date.getFullYear()-userAge))
+
+document.write("<h3>Your K-Electric bill</h3> <br> Customer name: " + prompt("Enter your name: ") + "<br>" + "Current Month: " + monthNames[month])
+var numOfUnits = parseInt(prompt("Enter number of units"))
+var netAmount = numOfUnits * 16
+document.write("<br> Number of units: " + numOfUnits + "<br> Charges per unit: 16" + " <br> Net Amount Payable (within Due Date): " + netAmount + "<br>Late Payment Surcharge: 350")
+document.write("<br> Gross Amount Payable (after Due Date): " + (netAmount + 350))
